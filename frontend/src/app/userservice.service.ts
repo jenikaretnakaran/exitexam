@@ -11,10 +11,10 @@ export class UserserviceService {
   
  
   submitUser(form){
-    return this.http.post("http://localhost:8080/api/submit",form);
+    return this.http.post("api/submit",form);
   }
 
   validUser(email){
-    return this.http.get("http://localhost:8080/api/valid/"+email);
+    return this.http.get("api/valid/"+email);
   }
 }
