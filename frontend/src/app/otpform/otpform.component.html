@@ -1,0 +1,58 @@
+<section class="vh-100" style="background-color: #4B8673;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">OTP Validation</p>
+  
+                  <form class="mx-1 mx-md-4" [formGroup]="form" (ngSubmit)="onGenerate(form.value)">
+  
+                    <!--emailId-->
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" class="form-control" placeholder="Enter OTP"
+                          formControlName="otp" />
+                        <div
+                          *ngIf="form.get('otp').errors && (form.get('otp').dirty || form.get('otp').touched)"
+                          class="text-danger">
+                          <small *ngIf="form.get('otp').errors.required">OTP is required</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- textbox -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <div class="form-outline flex-fill mb-0">
+                            <textarea name="" id="" cols="42" rows="5" placeholder="Enter Text" class="form-control" formControlName="text"></textarea>
+                          <div
+                            *ngIf="form.get('text').errors && (form.get('text').dirty || form.get('text').touched)"
+                            class="text-danger">
+                            <small *ngIf="form.get('text').errors.required">Textfield should not be empty</small>
+                          </div>
+                        </div>
+                      </div>
+  
+                    <!--button-->
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="submit" [disabled]="form.invalid" class="btn btn-primary btn-lg">SUBMIT</button>
+                    </div>
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <a href="/userform">Back to OTP generation form <form action=""></form></a>
+                    </div>
+                  </form>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+

@@ -1,0 +1,39 @@
+.container-fluid{
+    background-color: #CDF0EA;
+    height:75vh;
+  }
+  .bookowl{
+      position: relative;
+      top:-100px;
+      width:10px;
+    }
+    .heading {
+      position: relative;
+      top: 200px;
+      font-family:"Sacramento";
+      font-size: 80px;
+      color: #1B2430;
+      line-height: 50px;
+      text-align: center;
+      
+      
+    }
+    .heading button{
+        font-family: sans-serif;
+        position: relative;
+        top:5px;
+        margin-top:10px ;
+        padding: 10px;
+    }
+  
+    /* Footer */
+  section {
+      padding: 60px 0;
+  }
+  
+  
+  #footer {
+      background: #007b5e !important;
+  }
+  
+  
